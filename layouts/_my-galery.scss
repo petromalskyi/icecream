@@ -1,0 +1,61 @@
+.my-gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @keyframes changeImg {
+    0% {
+      background-image: url(../images/brooke-lark-mobile@1x.jpg);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/brooke-lark-mobile@2x.jpg);
+      }
+    }
+
+  50% {
+        background-image: url(../images/courtney-cook-desktop@1x.jpg);
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/courtney-cook-desktop@2x.jpg);
+            }
+    }
+
+    100% {
+      background-image: url(../images/unsplash-desktop@1x.jpg);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/unsplash-desktop@1x.jpg);
+      }
+    }
+  }
+ 
+}
+
+.my-gallery::before {
+  position: absolute;
+  content: '';
+
+  animation-name: changeImg;
+  animation-duration: 10000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 250ms;
+
+  width: 280px;
+  height: 130px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: -32px;
+  border-radius: 8px;
+
+  @include mobile {
+    width: 440px;
+    height: 204px;
+  }
+
+}

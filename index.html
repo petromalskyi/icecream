@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="../../dist/gallery.prefixed.css" />
+    <link rel="stylesheet" href="../../dist/gallery.theme.css" />
+    <!-- <link rel="stylesheet" href="css/gallery.theme.css">
+    <link rel="stylesheet" href="css/gallery.min.css"> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>icecreem</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header container">
+      <a href="#" class="header__position" id="home">
+        <!-- <include src="./partials/logo.html"></include> -->
+        <svg width="18.6" height="37.14" aria-label="logotype">
+          <use href="./images/icon.svg#icon-logo"></use>
+        </svg>
+        <picture>
+          <source
+            srcset="
+              ./images/header/logo-ce-768@1x.png 1x,
+              ./images/header/logo-ce-768@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/header/logo-ce-480@1x.png 1x,
+              ./images/header/logo-ce-480@2x.png 2x
+            "
+          />
+          <img
+            class="header__logo-ce"
+            src="./images/header/logo-ce-480@1x.png"
+            alt="logotype"
+          />
+        </picture>
+</a>
+        <button
+          class="menu-button js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="32" aria-label="switch of mobile menu">
+            <use
+              class="icon-menu"
+              href="./images/icon.svg#icon-open_menu"
+            ></use>
+          </svg>
+        </button>
+      
+
+      <h1 class="header__title">
+        ice cream <br />
+        made with <br />
+        <span class="header__title-span">passion</span>
+      </h1>
+
+      <a href="#our-products" class="header__products link">Products</a>
+      <a href="#about" class="header__made">How it’s made?</a>
+
+      <picture>
+        <source
+          srcset="
+            ./images/header/points-1200@1x.png 1x,
+            ./images/header/points-1200@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/header/points-768@1x.png 1x,
+            ./images/header/points-768@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/header/points-480@1x.png 1x,
+            ./images/header/points-480@2x.png 2x
+          "
+          media="(min-width: 480px)"
+        />
+        <source
+          srcset="
+            ./images/header/points-320@1x.png 1x,
+            ./images/header/points-320@2x.png 2x
+          "
+        />
+        <img
+          class="header__points"
+          src="./images/header/points-320@1x.png"
+          alt="points"
+        />
+      </picture>
+
+      <picture>
+        <source
+          srcset="
+            ./images/header/icecream-1200@1x.png 1x,
+            ./images/header/icecream-1200@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/header/icecream-768@1x.png 1x,
+            ./images/header/icecream-768@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/header/icecream-480@1x.png 1x,
+            ./images/header/icecream-480@2x.png 2x
+          "
+          media="(min-width: 480px)"
+        />
+        <source
+          srcset="
+            ./images/header/icecream-320@1x.png 1x,
+            ./images/header/icecream-320@2x.png 2x
+          "
+        />
+        <img
+          class="header__mobile"
+          src="./images/header/mobile@1x.png"
+          alt="photo ice-creem"
+        />
+      </picture>
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <div class="position-menu">
+          <a href="#home" class="header__position">
+            <svg width="18.6" height="37.14" aria-label="logotype">
+              <use href="./images/icon.svg#icon-logo"></use>
+            </svg>
+            <picture>
+              <source
+                srcset="
+                  ./images/header/logo-ce-768@1x.png 1x,
+                  ./images/header/logo-ce-768@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/header/logo-ce-480@1x.png 1x,
+                  ./images/header/logo-ce-480@2x.png 2x
+                "
+              />
+              <img
+                class="header__logo-ce"
+                src="./images/header/logo-ce-480@1x.png"
+                alt="logotype"
+              />
+            </picture>
+          </a>
+
+          <button
+            class="menu-button js-close-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="32" height="32" aria-label="switch of mobile menu">
+              <use
+                class="icon-menu"
+                href="./images/icon.svg#icon-close_menu"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="mobile-menu list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="./index.html">Home</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="#about">How it’s made?</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="#our-products"
+              >Our products</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+        <!-- <button type="button" class="button" data-modal-open></button> -->
+        <button class="button-menu" type="button" data-modal-open>
+          Buy now
+          <svg
+            class="icon-button"
+            width="14"
+            height="14"
+            aria-label="button of mobile menu Buy now"
+          >
+            <use href="./images/icon.svg#icon-ep_arrow-right-bold"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- PRODUCTS -->
+      <article class="products section" id="our-products">
+        <div class="container">
+          <p class="products__text">100% natural</p>
+          <h2 class="products__title">products</h2>
+
+          <ul class="products-cards list">
+            <li
+              class="products-cards__item products-cards__item--bg1 products-cards__item--bg-ellipse1"
+            >
+              <div class="products-cards__img products-cards__img--img1"></div>
+              <h3 class="products-cards__title">ice cream</h3>
+              <p class="products-cards__text">
+                Soft ice cream with a delicate taste. Made with milk, cream,
+                sugar and natural stabilizer
+              </p>
+              <button
+                class="products-cards__btn"
+                type="button"
+                data-modal-open1
+                data-name="Chololate Icecream"
+              >
+                <svg
+                  class="products-cards__arrow"
+                  width="40"
+                  height="16"
+                  aria-label="arrow"
+                >
+                  <use href="./images/icon.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </li>
+
+            <li
+              class="products-cards__item products-cards__item--bg2 products-cards__item--bg-ellipse2"
+            >
+              <div class="products-cards__img products-cards__img--img2"></div>
+
+              <h3 class="products-cards__title">ice coffee</h3>
+              <p class="products-cards__text">
+                Fragrant invigorating drink created from 100% natural
+                ingredients without the use of preservatives and flavor
+                enhancers
+              </p>
+              <button
+                class="products-cards__btn"
+                type="button"
+                data-modal-open1-1
+                data-name="Ice Coffee"
+              >
+                <svg
+                  class="products-cards__arrow"
+                  width="40"
+                  height="16"
+                  aria-label="arrow"
+                >
+                  <use href="./images/icon.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </li>
+
+            <li
+              class="products-cards__item products-cards__item--bg3 products-cards__item--bg-ellipse3"
+            >
+              <div class="products-cards__img products-cards__img--img3"></div>
+              <h3 class="products-cards__title">milkshakes</h3>
+              <p class="products-cards__text">
+                Sweet drinks based on milk and ice cream, supplemented with
+                syrups, fruits, berries and other sweets of your choice
+              </p>
+              <button
+                class="products-cards__btn"
+                type="button"
+                data-modal-open1-2
+                data-name="Milkshakes"
+              >
+                <svg
+                  class="products-cards__arrow"
+                  width="40"
+                  height="16"
+                  aria-label="arrow"
+                >
+                  <use href="./images/icon.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ABOUT -->
+      <section class="about section" id="about">
+        <div class="container">
+          <p class="about__tradition">tradition and love</p>
+          <h2 class="about__title">
+            how <br />
+            it’s <br />
+            made?
+          </h2>
+          <div class="about__cow"></div>
+          <p class="about__text">
+            Ice is a place where you will become not only a little happier, but
+            also healthier. Health is the main value for us, and we follow it
+            when creating our handmade desserts.
+          </p>
+
+          <p class="about__text">
+            We use traditional recipes and 100% natural ingredients. Our
+            products are so natural that they can be given to children from the
+            age of three years. Sweets lovers can expect 55 types of ice cream,
+            15 types of coffee and 23 milkshakes.
+          </p>
+          <button class="about__btn" type="button" data-modal-open2>
+            Read more
+            <svg
+              class="icon-button"
+              width="14"
+              height="14"
+              aria-label="button of mobile menu Read more"
+            >
+              <use href="./images/icon.svg#icon-ep_arrow-right-bold"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Advantages -->
+      <section class="advantages">
+        <div class="container">
+          <h2 class="visually-hidden">Advantages</h2>
+          <ul class="advantages-list list">
+            <li class="advantages-list__item">
+              <svg
+                class="advantages-list__icon"
+                width="50"
+                height="50"
+                aria-label="cow"
+              >
+                <use href="./images/icon.svg#icon-cow"></use>
+              </svg>
+              <p class="advantages-list__numbers">721</p>
+              <p class="advantages-list__text">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+            </li>
+
+            <li class="advantages-list__item">
+              <svg
+                class="advantages-list__icon"
+                width="50"
+                height="50"
+                aria-label="weight"
+              >
+                <use href="./images/icon.svg#icon-weight"></use>
+              </svg>
+              <p class="advantages-list__numbers">16kg</p>
+              <p class="advantages-list__text">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+            </li>
+
+            <li class="advantages-list__item">
+              <svg
+                class="advantages-list__icon"
+                width="50"
+                height="50"
+                aria-label="ice-crema"
+              >
+                <use href="./images/icon.svg#icon-ice-crema"></use>
+              </svg>
+              <p class="advantages-list__numbers">84</p>
+              <p class="advantages-list__text">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- my-galery -->
+      <section class="my-gallery">
+        <div class="container">
+          <h2 class="visually-hidden">Gallery</h2>
+        </div>
+      </section>
+
+      <!-- Customer -->
+      <section class="customer">
+        <div class="container">
+          <h2 class="visually-hidden">Customer reviews</h2>
+          <div class="gallery autoplay items-3">
+            <div id="item-1" class="control-operator"></div>
+            <div id="item-2" class="control-operator"></div>
+            <div id="item-3" class="control-operator"></div>
+
+            <figure class="item">
+              <img
+                class="customer__img"
+                srcset="
+                  ./images/pexels-elias-mobile@1x.jpg 1x,
+                  ./images/pexels-elias-mobile@2x.jpg 2x
+                "
+                src="./images/pexels-elias-mobile@1x.jpg"
+                alt="photo Emily, Los Angeles"
+              />
+              <p class="customer__text">
+                I love visiting your cafe. You prepare the most delicious ice
+                cream in Los Angeles! In addition, you have beautiful serving,
+                cozy atmosphere and polite staff.
+              </p>
+
+              <p class="customer__name">Emily, Los Angeles</p>
+            </figure>
+
+            <figure class="item">
+              <img
+                class="customer__img"
+                srcset="
+                  ./images/pexels-nappy@1x.jpg 1x,
+                  ./images/pexels-nappy@2x.jpg 2x
+                "
+                src="./images/pexels-nappy@1x.jpg"
+                alt="photo Bryan, New-York"
+              />
+              <p class="customer__text">
+                Every day we come to you with friends after classes in college.
+                We love your ice cream and casual atmosphere!
+              </p>
+
+              <p class="customer__name">Bryan, New-York</p>
+              <!-- <h3>2</h3> -->
+            </figure>
+
+            <figure class="item">
+              <img
+                class="customer__img"
+                srcset="
+                  ./images/pexels-edu-carvalho@1x.jpg 1x,
+                  ./images/pexels-edu-carvalho@2x.jpg 2x
+                "
+                src="./images/pexels-edu-carvalho@1x.jpg"
+                alt="photo Diana, Chicago"
+              />
+
+              <p class="customer__text">
+                Ice cream is my passion! I love your chocolate hazelnut ice
+                cream! And I really like the excellent service - always served
+                politely and quickly!
+              </p>
+              <p class="customer__name">Diana, Chicago</p>
+            </figure>
+
+            <div class="controls">
+              <a href="#item-1" class="control-button"></a>
+              <a href="#item-2" class="control-button"></a>
+              <a href="#item-3" class="control-button"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacts -->
+      <section class="contacts">
+        <div class="container">
+          <h2 class="visually-hidden" id="contacts">Our contacts</h2>
+          <ul class="contacts-box list">
+            <li class="contacts-box__item">
+              <p class="contacts-box__type">CAFE</p>
+              <address>
+                <p class="contacts-box__city">Chicago</p>
+                <a
+                  href="https://goo.gl/maps/z5zQikduhLcWutUt6"
+                  class="contacts-box__address link"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >10340 Ridgeland Ave,<br />
+                  Chicago Ridge, IL 60415, USA</a
+                >
+                <div class="contacts-box__border"></div>
+                <p class="contacts-box__days">Monday - Friday</p>
+                <p class="contacts-box__times">06:00 AM - 10:00 PM</p>
+                <p class="contacts-box__days">Saturday - Sunday</p>
+                <p class="contacts-box__times">08:00 AM - 16:00 PM</p>
+                <div class="contacts-box__border"></div>
+                <a class="contacts-box__tel link" href="tel:+610383766284"
+                  >+61(0) 383 766 284</a
+                >
+                <a
+                  class="contacts-box__mail link"
+                  href="mailto:noreply@envato.com"
+                  >noreply@envato.com</a
+                >
+              </address>
+            </li>
+
+            <li class="contacts-box__item">
+              <p class="contacts-box__type">FOODTRUCK</p>
+              <address>
+                <p class="contacts-box__city">Los Angeles</p>
+                <a
+                  href="https://goo.gl/maps/Y5SNx8bvwrNBH32U6"
+                  class="contacts-box__address link"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >1003 Manhattan Ave, Manhattan <br />Beach, CA 90263, USA</a
+                >
+                <div class="contacts-box__border"></div>
+                <p class="contacts-box__days">Monday - Friday</p>
+                <p class="contacts-box__times">06:00 AM - 10:00 PM</p>
+                <p class="contacts-box__days">Saturday - Sunday</p>
+                <p class="contacts-box__times">08:00 AM - 16:00 PM</p>
+                <div class="contacts-box__border"></div>
+                <a class="contacts-box__tel link" href="tel:+610383766284"
+                  >+61(0) 383 766 284</a
+                >
+                <a
+                  class="contacts-box__mail link"
+                  href="mailto:noreply@envato.com"
+                  >noreply@envato.com</a
+                >
+              </address>
+            </li>
+
+            <li class="contacts-box__item">
+              <p class="contacts-box__type">CAFE</p>
+              <address>
+                <p class="contacts-box__city">New York</p>
+                <a
+                  href="https://goo.gl/maps/xA7mDS7hHd4frqb79"
+                  class="contacts-box__address link"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >726 Sterling Pl, Brooklyn, NY <br />
+                  11222, USA</a
+                >
+                <div class="contacts-box__border"></div>
+                <p class="contacts-box__days">Monday - Friday</p>
+                <p class="contacts-box__times">06:00 AM - 10:00 PM</p>
+                <p class="contacts-box__days">Saturday - Sunday</p>
+                <p class="contacts-box__times">08:00 AM - 16:00 PM</p>
+                <div class="contacts-box__border"></div>
+                <a class="contacts-box__tel link" href="tel:+610383766284"
+                  >+61(0) 383 766 284</a
+                >
+                <a
+                  class="contacts-box__mail link"
+                  href="mailto:noreply@envato.com"
+                  >noreply@envato.com</a
+                >
+              </address>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="contacts__location"
+            data-modal-open-location
+          >
+            Our Locations
+            <svg
+              class="icon-button"
+              width="14"
+              height="14"
+              aria-label="button of mobile menu Our Locations"
+            >
+              <use href="./images/icon.svg#icon-ep_arrow-right-bold"></use>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="contacts__franchise"
+            data-modal-open-franchise
+          >
+            Franchise
+            <svg
+              class="icon-button"
+              width="14"
+              height="14"
+              aria-label="button of mobile menu Franchise"
+            >
+              <use href="./images/icon.svg#icon-ep_arrow-right-bold"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">homemade ice cream made</p>
+        <p class="footer__passion">
+          with <br />
+          passion
+        </p>
+
+        <ul class="footer-social list">
+          <li class="footer-social__item">
+            <a
+              href="https://www.github.com"
+              target="_blank"
+              aria-label="github"
+              class="footer-social__link link"
+            >
+              <svg width="34" height="34" aria-label="github">
+                <use href="./images/icon.svg#icon-github"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a
+              href="https://www.telegram.com"
+              target="_blank"
+              aria-label="telegram"
+              class="footer-social__link link"
+            >
+              <svg width="34" height="34" aria-label="telegram">
+                <use href="./images/icon.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="facebook"
+              class="footer-social__link link"
+            >
+              <svg width="34" height="34" aria-label="facebook">
+                <use href="./images/icon.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__feelfree">
+          <p class="footer__contact">Feel free to contact</p>
+          <a href="tel:+610383766284" class="footer__tel link"
+            >+61 (0) 383 766 284</a
+          >
+        </div>
+        <div class="footer__line"></div>
+        <p class="footer__icecream">&copy; 2022 - IceCream.</p>
+        <p class="footer__icecream">All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- МОДАЛЬНЕ ВІКНО HEADER-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <h2 class="modal__title">Buy now</h2>
+        <button type="button" class="modal__button" data-modal-close>
+          <svg width="18" height="18">
+            <use href="./images/icon.svg#icon-vector-3"></use>
+          </svg>
+        </button>
+        <form class="modal-form">
+          <div role="group" class="group">
+            <ul class="cards list">
+              <li
+                class="cards__item cards__item--bg1 cards__img cards__img--img1 cards__item--bg-ellipse1"
+              >
+                <input
+                  class="cards__input visually-hidden"
+                  type="checkbox"
+                  name="ice-cream"
+                  id="ice-cream"
+                />
+                <label class="cards__label" for="ice-cream">ice cream</label>
+              </li>
+
+              <li
+                class="cards__item cards__item--bg2 cards__img cards__img--img2 cards__item--bg-ellipse2"
+              >
+                <input
+                  class="cards__input visually-hidden"
+                  type="checkbox"
+                  name="ice-coffee"
+                  id="ice-coffee"
+                />
+                <label class="cards__label" for="ice-coffee">ice coffee</label>
+              </li>
+
+              <li
+                class="cards__item cards__item--bg3 cards__item--bg-ellipse3 cards__img cards__img--img3"
+              >
+                <input
+                  class="cards__input visually-hidden"
+                  type="checkbox"
+                  name="milkshakes"
+                  id="milkshakes"
+                />
+                <label class="cards__label" for="milkshakes">milkshakes</label>
+              </li>
+            </ul>
+
+            <div class="modal-form__field">
+              <!-- <label class="modal-form__label" for="name"> </label> -->
+              <input
+                class="modal-form__input"
+                type="text"
+                name="name"
+                placeholder="Name"
+                minlength="3"
+                required
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Username must be two words separated by space."
+              />
+              <!-- <label class="modal-form__label" for="name">Name</label> -->
+              <!-- <span class="modal-form__span">Name</span> -->
+            </div>
+
+            <div class="modal-form__field">
+              <!-- <label class="modal-form__label" for="tel"></label> -->
+              <input
+                class="modal-form__input"
+                type="tel"
+                name="tel"
+                placeholder="Phone  +38 (000) 000-00-00"
+                required
+                pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                title="+38 (000) 000-00-00"
+              />
+              <!-- <label class="modal-form__label" for="tel">Phone</label> -->
+              <!-- <span class="modal-form__span">Phone</span> -->
+            </div>
+
+            <div class="modal-form__field">
+              <!-- <label class="modal-form__label" for="textarea"></label> -->
+              <textarea
+                class="modal-form__comment"
+                name="comment"
+                placeholder="Comment"
+              ></textarea>
+            </div>
+          </div>
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- МОДАЛЬНЕ ВІКНО PRODUCTS-->
+    <div class="backdrop1 is-hidden1" data-modal1>
+      <div class="modal1">
+        <!-- //тут динамічно змінити назву морозива data-change-name -->
+        <h2 class="modal1__title" data-change-name>Chololate icecream</h2>
+        <button type="button" class="modal1__button" data-modal-close1>
+          <svg width="18" height="18">
+            <use href="./images/icon.svg#icon-vector-3"></use>
+          </svg>
+        </button>
+        <div class="modal1__img"></div>
+        <ul class="modal1-info list">
+          <li class="modal1-info__item">
+            <p class="modal1-info__weight">320</p>
+            <p class="modal1-info__units">kcal</p>
+          </li>
+          <li class="modal1-info__item">
+            <p class="modal1-info__weight">4g</p>
+            <p class="modal1-info__units">Prote...</p>
+          </li>
+          <li class="modal1-info__item">
+            <p class="modal1-info__weight">8,2g</p>
+            <p class="modal1-info__units">Fats</p>
+          </li>
+          <li class="modal1-info__item">
+            <p class="modal1-info__weight">40,4g</p>
+            <p class="modal1-info__units">Carbs</p>
+          </li>
+        </ul>
+        <b class="modal1__text">Ingredients</b>
+        <ul class="ingredients list">
+          <li class="ingredients__item">
+            <p class="ingredients__text">Milk</p>
+            <p class="ingredients__text">100ml</p>
+          </li>
+          <li class="ingredients__item">
+            <p class="ingredients__text">Belgian chocolate</p>
+            <p class="ingredients__text">20g</p>
+          </li>
+          <li class="ingredients__item">
+            <p class="ingredients__text">Cream</p>
+            <p class="ingredients__text">150 ml</p>
+          </li>
+          <li class="ingredients__item">
+            <p class="ingredients__text">Cocoa powder</p>
+            <p class="ingredients__text">30g</p>
+          </li>
+          <li class="ingredients__item">
+            <p class="ingredients__text">Sugar</p>
+            <p class="ingredients__text">40g</p>
+          </li>
+          <li class="ingredients__item">
+            <p class="ingredients__text">Vanilla sugar</p>
+            <p class="ingredients__text">10g</p>
+          </li>
+        </ul>
+
+        <form class="modal-form">
+          <div role="group" class="group">
+            <div class="modal-form__field">
+              <input
+                class="modal-form__input"
+                type="text"
+                name="name"
+                placeholder="Name"
+                minlength="3"
+                required
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Username must be two words separated by space."
+              />
+              <!-- <label class="modal-form__label" for="name">Name</label> -->
+            </div>
+
+            <div class="modal-form__field">
+              <input
+                class="modal-form__input"
+                type="tel"
+                name="tel"
+                placeholder="Phone  +38 (000) 000-00-00"
+                required
+                pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                title="+38 (000) 000-00-00"
+              />
+              <!-- <label class="modal-form__label" for="tel1">Phone</label> -->
+            </div>
+
+            <div class="modal-form__field">
+              <textarea
+                class="modal-form__comment"
+                name="comment"
+                placeholder="Comment"
+              ></textarea>
+            </div>
+          </div>
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- МОДАЛЬНЕ ВІКНО ABOUT-->
+    <div class="backdrop2 is-hidden2" data-modal2>
+      <div class="modal2">
+        <h2 class="modal2__title">How it’s made?</h2>
+        <button type="button" class="modal2__button" data-modal-close2>
+          <svg width="18" height="18">
+            <use href="./images/icon.svg#icon-vector-3"></use>
+          </svg>
+        </button>
+
+        <iframe
+          class="modal2__video"
+          width="224"
+          height="199"
+          src="https://www.youtube.com/embed/_Zt1EuIEhvw"
+          title="Homemade Ice Cream Without a Machine in Just 5 Minutes"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <!-- frameborder="0" -->
+        <p class="modal2__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et
+        </p>
+      </div>
+    </div>
+
+    <!-- МОДАЛЬНЕ ВІКНО LOCATION-->
+    <div class="backdrop3 is-hidden3" data-modal-location>
+      <div class="modal3">
+        <h2 class="modal3__title">Our Locations</h2>
+        <button type="button" class="modal3__button" data-modal-close-location>
+          <svg width="18" height="18">
+            <use href="./images/icon.svg#icon-vector-3"></use>
+          </svg>
+        </button>
+        <!-- <picture>
+
+</picture> -->
+        <img
+          class="modal3__img"
+          srcset="./images/rectangle@1x.jpg 1x, ./images/rectangle@2x.jpg 2x"
+          src="./images/rectangle@1x.jpg"
+          alt="Map Our Locations"
+        />
+        <!-- <picture>
+          <source srcset="./images/hero/big-ice-cream-desktop-1x.png 1x,
+                            ./images/hero/big-ice-cream-desktop-2x.png 2x,
+                            ./images/hero/big-ice-cream-desktop-3x.png 3x" media="(min-width: 1200px)">
+          <source srcset="./images/hero/big-ice-cream-tablet-1x.png 1x,
+                            ./images/hero/big-ice-cream-tablet-2x.png 2x,
+                            ./images/hero/big-ice-cream-tablet-3x.png 3x" media="(min-width: 768px)">
+          <source srcset="./images/hero/big-ice-cream-480px-1x.png 1x,
+                            ./images/hero/big-ice-cream-480px-2x.png 2x,
+                            ./images/hero/big-ice-cream-480px-3x.png 3x" media="(min-width: 480px)">
+          <source srcset="./images/hero/big-ice-cream-mobile-1x.png 1x,
+                            ./images/hero/big-ice-cream-mobile-2x.png 2x,
+                            ./images/hero/big-ice-cream-mobile-3x.png 3x">
+          <img class="hero__image hero__image--cone animate__animated animate__zoomIn"
+            src="./images/hero/big-ice-cream-mobile-1x.png" alt="ice cream cone">
+        </picture> -->
+        <a
+          class="modal3__link link"
+          href="https://goo.gl/maps/Gp12fhm3RYRaatEZ8"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          Open map
+        </a>
+      </div>
+    </div>
+
+    <!-- МОДАЛЬНЕ ВІКНО Franchise-->
+    <div class="backdrop4 is-hidden4" data-modal-franchise>
+      <div class="modal4">
+        <h2 class="modal4__title">
+          Thank you for your interest in owning an Ice Cream shop
+        </h2>
+        <button type="button" class="modal4__button" data-modal-close-franchise>
+          <svg width="18" height="18">
+            <use href="./images/icon.svg#icon-vector-3"></use>
+          </svg>
+        </button>
+        <p class="modal4__text">
+          Due to the overwhelming volume of franchise requests we are not
+          accepting new franchisee applications at this time. Once the
+          application process resumes, we will contact you for further
+          information. Please fill out the contact information below and we will
+          reach out for additional information. We appreciate your patience.
+        </p>
+
+        <form class="modal-form">
+          <div role="group" class="group">
+            <div class="modal-form__field">
+              <input
+                class="modal-form__input"
+                type="text"
+                name="name"
+                placeholder="Name"
+                minlength="3"
+                required
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Username must be two words separated by space."
+              />
+              <!-- <label class="modal-form__label" for="name1">Name</label> -->
+            </div>
+
+            <div class="modal-form__field">
+              <input
+                class="modal-form__input"
+                type="tel"
+                name="tel"
+                placeholder="Phone  +38 (000) 000-00-00"
+                required
+                pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                title="+38 (000) 000-00-00"
+              />
+              <!-- <label class="modal-form__label" for="tel1">Phone</label> -->
+            </div>
+
+            <div class="modal-form__field">
+              <input
+                class="modal-form__input"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                title=""
+              />
+              <!-- <label class="modal-form__label" for="email">Phone</label> -->
+            </div>
+
+            <div class="modal-form__field">
+              <textarea
+                class="modal-form__comment"
+                name="comment"
+                placeholder="Comment"
+              ></textarea>
+            </div>
+          </div>
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/modal1.js" type="module"></script>
+    <script src="./js/modal2.js" type="module"></script>
+    <script src="./js/modal3.js" type="module"></script>
+    <script src="./js/modal4.js" type="module"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+  </body>
+</html>

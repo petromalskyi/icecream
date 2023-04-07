@@ -1,0 +1,245 @@
+.header {
+  position: relative;
+  padding-top: 12px;
+  background-color: #84a178;
+  max-width: 320px; //480
+  height: 100vh;
+
+  @keyframes changeScaleIcecream {
+    0% {
+      scale: 0.25;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+
+  @keyframes changeScalePoints {
+    0% {
+      scale: 0.25;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+
+  //   height: 502px;
+  //   width: 100vh;
+
+  //   @media screen and (max-width: 1199px) {
+  //     width: $tablet;
+  //   }
+
+  //   @media screen and (max-width: 767px) {
+  //     width: $mobile;
+  //   }
+
+  //   @media screen and (max-width: 479px) {
+  //     width: 100%;
+  //   }
+
+
+     @include mobile {
+      max-width: 480px; 
+        height: 415px;//100vh
+     }
+
+  &__position {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__logo-ce {
+    position: absolute;
+    top: 39px;
+    left: 35px;
+  }
+
+  .menu-button {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  &__title {
+    font-family: 'Seymour One';
+    font-weight: 400;
+    font-size: 26px;
+    line-height: calc(33 / 26);
+    letter-spacing: 0.04em;
+    color: #fcfcfc;
+  }
+
+  &__title-span {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  &__products {
+    margin-right: 12px;
+    padding: 11px 26px;
+    transition: border-color 250ms linear;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+    color: #000000;
+    background-color: #84a178;
+    border: 2px solid #f8d24e;
+    border-radius: 8px;
+  }
+
+  &__products:hover {
+    border-color: #0a8817;
+  }
+
+  &__made {
+    margin-bottom: 26px;
+    transition: color 250ms linear;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+    background-color: #84a178;
+    color: #f8d24e;
+    border: none;
+  }
+
+  &__made:hover {
+    color: #0a8817;
+  }
+  &__made:focus {
+    color: #ffffff;
+  }
+
+  &__points {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // transition: transform 500ms linear;
+    animation-name: changeScalePoints;
+    animation-duration: 1000ms;
+            @include mobile {
+                left: 155px
+              }
+            
+  }
+
+  &__mobile {
+    position: absolute;
+    bottom: 0;
+    left: 83px;
+    //    transition: transform 500ms linear;
+
+    animation-name: changeScaleIcecream;
+    animation-duration: 1000ms;
+        @include mobile {
+           left: 242px
+          }
+  }
+
+ 
+}
+
+.menu-container {
+  // z-index: 0;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 12px 20px 64px 20px;
+  //background-color: #817C7C;
+  background-color: #84a178;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateX(-150%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.position-menu {
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 40px;
+}
+
+.mobile-menu {
+  margin-bottom: 110px;
+
+  &__item {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: calc(39 / 32);
+    color: #fcfcfc;
+    text-align: center;
+
+    @include tablet {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: calc(59 / 48);
+    }
+  }
+  &__link:hover &__link:hover {
+    color: #000000;
+  }
+}
+
+.button-menu {
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 12px 41px 12px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000000;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  border-color: #f8d24e;
+}
+
+.button-menu:hover {
+  background-color: #0a8817;
+  border: none;
+  //   border-color: #0a8817;
+}
+
+.button-menu:focus {
+  background-color: #0a8817;
+  color: #ffffff;
+  fill: #ffffff;
+  //   border: none;
+  outline: none;
+  border: 2px solid #0a8817;
+}
+
+.icon-button {
+  display: inline-block;
+  margin-left: 5px;
+}

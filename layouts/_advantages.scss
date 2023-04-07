@@ -1,0 +1,65 @@
+
+@import '../base/hiden';
+
+// .visually-hidden {
+//     position: absolute;
+//     white-space: nowrap;
+//     width: 1px;
+//     height: 1px;
+//     overflow: hidden;
+//     border: 0;
+//     padding: 0;
+//     clip: rect(0 0 0 0);
+//     clip-path: inset(50%);
+//     margin: -1px;
+// }
+
+.advantages {
+    // padding-top: 50px;
+    padding-bottom: 64px;
+    background-color: #84a178;
+}
+
+.advantages-list {
+    &__item {
+        margin-bottom: 28px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__icon {
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    &__numbers {
+        margin: 0;
+        margin-bottom: 16px;
+        display: block;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: calc(44 / 36);
+        text-align: center;
+        text-transform: uppercase;
+        color: #fcfcfc;
+    }
+
+    &__text {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 220px;
+        font-size: 12px;
+        line-height: 1.76;
+        text-align: center;
+        color: #fcfcfc;
+    }
+}
