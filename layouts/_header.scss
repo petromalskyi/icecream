@@ -45,9 +45,10 @@
   }
 
   &__position {
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    
   }
 
   &__logo-ce {
@@ -176,7 +177,7 @@
 }
 
 .mobile-menu {
-  margin-bottom: 110px;
+  margin-bottom: 90px;
 
   &__item {
     margin-bottom: 32px;
