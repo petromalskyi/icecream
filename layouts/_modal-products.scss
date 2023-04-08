@@ -40,7 +40,7 @@
   // }
 
   &__title {
-    margin-bottom: 182px;
+    margin-bottom: 200px;
     font-family: 'Seymour One';
     font-style: normal;
     font-weight: 400;
@@ -63,15 +63,14 @@
     cursor: pointer;
   }
 
-  //   &__text {
-  //     margin-bottom: 24px;
-  //     display: block;
-  //     font-weight: 500;
-  //     font-size: 20px;
-  //     line-height: calc(28 / 20);
-  //     text-align: center;
-  //     color: #131313;
-  //   }
+  &__text {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(28 / 20);
+    text-align: center;
+    color: #131313;
+  }
 
   &__img::before {
     position: absolute;
@@ -102,7 +101,8 @@
     top: 104px;
     left: 50%;
     transform: translate(-50%, 0);
-  transition: transform 250ms linear;
+    transition: transform 250ms linear;
+    background-size: cover;
     background-image: url(../images/Ellipse67@1x.jpg);
 
     @media (min-device-pixel-ratio: 2),
@@ -200,6 +200,14 @@
     //top: 8px;
   }
 }
+
+// .modal1__text {
+// font-weight: 500;
+//   font-size: 20px;
+//   line-height: 1.4;
+//    text-align: center;
+//   color: #131313;
+// }
 
 .ingredients {
   margin-bottom: 40px;

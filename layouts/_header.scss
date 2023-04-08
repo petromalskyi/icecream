@@ -3,7 +3,8 @@
   padding-top: 12px;
   background-color: #84a178;
   max-width: 320px; //480
-  height: 100vh;
+  // height: 100vh;
+  height: 502px;
 
   @keyframes changeScaleIcecream {
     0% {
@@ -38,11 +39,10 @@
   //     width: 100%;
   //   }
 
-
-     @include mobile {
-      max-width: 480px; 
-        height: 415px;//100vh
-     }
+  @include mobile {
+    max-width: 480px;
+    height: 415px; //100vh
+  }
 
   &__position {
     display: flex;
@@ -125,10 +125,9 @@
     // transition: transform 500ms linear;
     animation-name: changeScalePoints;
     animation-duration: 1000ms;
-            @include mobile {
-                left: 155px
-              }
-            
+    @include mobile {
+      left: 155px;
+    }
   }
 
   &__mobile {
@@ -139,12 +138,10 @@
 
     animation-name: changeScaleIcecream;
     animation-duration: 1000ms;
-        @include mobile {
-           left: 242px
-          }
+    @include mobile {
+      left: 242px;
+    }
   }
-
- 
 }
 
 .menu-container {

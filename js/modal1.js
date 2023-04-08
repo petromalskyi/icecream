@@ -23,7 +23,7 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden1');
   }
-
+ 
   function changeName(event) {
     refs.changeNameEl.textContent = event.currentTarget.dataset.name; 
   }
