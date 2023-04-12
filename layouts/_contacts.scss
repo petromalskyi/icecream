@@ -2,92 +2,28 @@
 
 .contacts {
   padding-bottom: 60px;
-
-  //   background-image: url(../images/backgroud_mobile2@1x.jpg);
-
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
-  //   height: 353px;
-
-  //   @media (min-device-pixel-ratio: 2),
-  //     (min-resolution: 192dpi),
-  //     (min-resolution: 2dppx) {
-  //     background-image: url(../images/backgroud_mobile2@2x.jpg);
-  //   }
-
   background-color: #84a178;
-
-  &__location {
-    margin-bottom: 16px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 12px 55px 12px 40px;
-    transition: background-color 250ms linear, 
-      color 250ms linear,
-      fill 250ms linear,
-      outline-color 250ms linear;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #131313;
-    background-color: #f8d24e;
-    border-radius: 10px;
-    border: none;
+  @include tablet {
+    padding-bottom: 40px;
   }
-
-  &__location:hover,
-  &__location:focus {
-    background-color: #0a8817;
-  }
-
-  &__location:focus {
-    color: #ffffff;
-    fill: #ffffff;
-    outline: 2px solid #0a8817;
-  }
-
-  &__franchise {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 12px 70px 12px 55px;
-    transition: border-color 250ms linear,
-        color 250ms linear,
-        fill 250ms linear,
-      outline-color 250ms linear;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-    border-radius: 10px;
-    border: 2px solid #f8d24e;
-    border-radius: 10px;
-    background-color: inherit;
-  }
-
-  &__franchise:hover,
-  &__franchise:focus {
-    border: 2px solid #0a8817;
-  }
-
-  &__franchise:focus {
-    color: #ffffff;
-     fill: #ffffff;
-    outline: 2px solid #0a8817;
-  }
+     @include desktop {
+       padding-bottom: 120px;
+     }
 }
 
 .contacts-box {
+  //margin-top: -353px;
+  transform: translateY(-353px);
   margin-bottom: 20px;
-  background-color: #84a178;
+  @include tablet {
+    display: flex;
+    gap: 16px;
+    transform: translateY(-299px);
+  }
+  @include desktop {
+    gap: 32px;
+    transform: translateY(-128px);
+  }
 
   &__item {
     margin-bottom: 16px;
@@ -99,10 +35,18 @@
     background: #fcfcfc;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    @include tablet {
+      width: 224px;
+      padding: 44px 0px 40px 24px;
+    }
+    @include desktop {
+      width: 368px;
+      padding: 40px 0px 40px 40px;
+    }
   }
-  &__item:last-child {
-    margin-bottom: 0;
-  }
+  // &__item:last-child {
+  //   margin-bottom: 0;
+  // }
 
   &__type {
     margin-bottom: 20px;
@@ -114,6 +58,15 @@
     color: #131313;
     background: #f8d24e;
     border-radius: 4px;
+    @include tablet {
+      font-size: 16px;
+      line-height: calc(22 / 16);
+    }
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 1.4;
+    }
   }
 
   &__city {
@@ -122,15 +75,33 @@
     font-size: 12px;
     line-height: 1.86;
     color: #131313;
+    @include tablet {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 1.86;
+    }
   }
 
   &__address {
     // margin-bottom: 24px;
-
-   font-weight: 500;
+    display: inline-block;
+    font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
     color: #d6936d;
+    @include tablet {
+      font-size: 14px;
+      width: 173px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+      width: 288px;
+    }
   }
 
   &__address:hover {
@@ -148,6 +119,12 @@
     font-size: 12px;
     line-height: 1.86;
     color: #131313;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__times {
@@ -156,6 +133,12 @@
     font-size: 12px;
     line-height: 1.86;
     color: #ababab;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__tel {
@@ -164,6 +147,13 @@
     font-size: 12px;
     line-height: 1.6;
     color: #131313;
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__mail {
@@ -171,18 +161,96 @@
     font-size: 12px;
     line-height: 1.6;
     color: #131313;
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
-        &__tel:hover {
-          text-decoration: underline;
-        }
+  &__tel:hover {
+    text-decoration: underline;
+  }
 
-    &__mail:hover {
-      text-decoration: underline;
-    }
+  &__mail:hover {
+    text-decoration: underline;
+  }
 }
 
 .icon-button {
   display: inline-block;
   margin-left: 5px;
+}
+
+.contacts__location {
+  // margin-bottom: 16px;
+  margin: -353px 42px 16px 42px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 55px 12px 40px;
+  transition: background-color 250ms linear, color 250ms linear,
+    fill 250ms linear, outline-color 250ms linear;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #131313;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  border: none;
+  @include tablet {
+    // margin: -353px 42px 16px 42px;
+    margin-top: -300px;
+  }
+  @include desktop {
+    margin-top: -100px;
+  }
+}
+
+.contacts__location:hover,
+.contacts__location:focus {
+  background-color: #0a8817;
+}
+
+.contacts__location:focus {
+  color: #ffffff;
+  fill: #ffffff;
+  outline: 2px solid #0a8817;
+}
+
+.contacts__franchise {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 70px 12px 55px;
+  transition: border-color 250ms linear, color 250ms linear, fill 250ms linear,
+    outline-color 250ms linear;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  border-radius: 10px;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.contacts__franchise:hover,
+.contacts__franchise:focus {
+  border: 2px solid #0a8817;
+}
+
+.contacts__franchise:focus {
+  color: #ffffff;
+  fill: #ffffff;
+  outline: 2px solid #0a8817;
 }

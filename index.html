@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Seymour+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat:wght@400;500;600;700;800&family=Seymour+One&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -25,42 +27,90 @@
   <body>
     <!-- HEADER -->
     <header class="header container">
-      <a href="#" class="header__position" id="home">
-        <!-- <include src="./partials/logo.html"></include> -->
-        <svg width="18.6" height="37.14" aria-label="logotype">
-          <use href="./images/icon.svg#icon-logo"></use>
-        </svg>
-        <picture>
-          <source
-            srcset="
-              ./images/header/logo-ce-768@1x.png 1x,
-              ./images/header/logo-ce-768@2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/header/logo-ce-480@1x.png 1x,
-              ./images/header/logo-ce-480@2x.png 2x
-            "
-          />
-          <img
-            class="header__logo-ce"
-            src="./images/header/logo-ce-480@1x.png"
-            alt="logotype"
-          />
-        </picture>
-      </a>
-      <button
-        class="menu-button js-open-menu"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg width="32" height="32" aria-label="switch of mobile menu">
-          <use class="icon-menu" href="./images/icon.svg#icon-open_menu"></use>
-        </svg>
-      </button>
+      <nav class="header__flex">
+        <a href="#" class="header__position" id="home">
+          <!-- <include src="./partials/logo.html"></include> -->
+          <!-- <svg class="header__logotype" aria-label="logotype">
+            <use href="./images/icon.svg#icon-logo"></use>
+          </svg> -->
+          <picture>
+            <source
+              srcset="
+                ./images/header/logo1200@1x.png 1x,
+                ./images/header/logo1200@2x.png 2x
+              "
+              media="(min-width: 1200px)"
+            />
+
+            <source
+              srcset="
+                ./images/header/logo480@1x.png 1x,
+                ./images/header/logo480@2x.png 2x
+              "
+              media="(min-width: 480px)"
+            />
+            <source
+              srcset="
+                ./images/header/logo320@1x.png 1x,
+                ./images/header/logo320@2x.png 2x
+              "
+              media="(min-width: 320px)"
+            />
+            <img
+              class="header__logotype"
+              src="./images/header/logo320@1x.png"
+              alt="logotype"
+            />
+          </picture>
+        </a>
+        <button
+          class="menu-button js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="32" aria-label="switch of mobile menu">
+            <use
+              class="icon-menu"
+              href="./images/icon.svg#icon-open_menu"
+            ></use>
+          </svg>
+        </button>
+
+        <!-- меню для десктоп -->
+        <ul class="main-menu list">
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="./index.html">Home</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#about">How it’s made?</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#our-products"
+              >Our products</a
+            >
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+        <!-- кнопка для десктоп і таблет -->
+        <button
+          class="button-menu button-menu--main"
+          type="button"
+          data-modal-open-main
+        >
+          Buy now
+          <svg
+            class="icon-button"
+            width="14"
+            height="14"
+            aria-label="button of mobile menu Buy now"
+          >
+            <use href="./images/icon.svg#icon-ep_arrow-right-bold"></use>
+          </svg>
+        </button>
+      </nav>
 
       <h1 class="header__title">
         ice cream <br />
@@ -140,30 +190,79 @@
           alt="photo ice-creem"
         />
       </picture>
+      <div class="header__down-position">
+        <picture>
+          <source
+            srcset="
+              ./images/header/many-ice1200@1x.jpg 1x,
+              ./images/header/many-ice1200@2x.jpg 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/header/many-ice768@1x.jpg 1x,
+              ./images/header/many-ice768@2x.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            class="header__many-ice"
+            src="./images/header/many-ice768@1x.jpg"
+            alt="many ice-cream"
+          />
+        </picture>
+
+        <div class="header__block">
+          <p class="header__block-text">
+            Indulge in a scoop of ice cream made with passion and treat your
+            taste buds to an unforgettable experience!
+          </p>
+          <!-- <svg class="header__block-arrow" width="40" height="16" aria-label="arrow">
+          <use href="./images/icon.svg#icon-logo"></use>
+        </svg> -->
+          <a href="#customer">
+            <svg
+              class="header__block-arrow"
+              width="40"
+              height="16"
+              aria-label="arrow"
+            >
+              <use href="./images/icon.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="header__side1">16</p>
+      <p class="header__side2">cafes</p>
+      <p class="header__side3">23</p>
+      <p class="header__side4">food trucks</p>
 
       <div class="menu-container js-menu-container" id="mobile-menu">
         <div class="position-menu">
           <a href="#home" class="header__position">
-            <svg width="18.6" height="37.14" aria-label="logotype">
+            <!-- <svg width="18.6" height="37.14" aria-label="logotype">
               <use href="./images/icon.svg#icon-logo"></use>
-            </svg>
+            </svg> -->
             <picture>
               <source
                 srcset="
-                  ./images/header/logo-ce-768@1x.png 1x,
-                  ./images/header/logo-ce-768@2x.png 2x
+                  ./images/header/logo480@1x.png 1x,
+                  ./images/header/logo480@2x.png 2x
                 "
-                media="(min-width: 768px)"
+                media="(min-width: 480px)"
               />
               <source
                 srcset="
-                  ./images/header/logo-ce-480@1x.png 1x,
-                  ./images/header/logo-ce-480@2x.png 2x
+                  ./images/header/logo320@1x.png 1x,
+                  ./images/header/logo320@2x.png 2x
                 "
+                media="(min-width: 320px)"
               />
               <img
-                class="header__logo-ce"
-                src="./images/header/logo-ce-480@1x.png"
+                class="header__logotype"
+                src="./images/header/logo320@1x.png"
                 alt="logotype"
               />
             </picture>
@@ -200,7 +299,7 @@
             <a class="mobile-menu__link link" href="#contacts">Contact</a>
           </li>
         </ul>
-        <!-- <button type="button" class="button" data-modal-open></button> -->
+
         <button class="button-menu" type="button" data-modal-open>
           Buy now
           <svg
@@ -311,34 +410,33 @@
         <div class="container">
           <p class="about__tradition">tradition and love</p>
           <h2 class="about__title">
-            how <br />
-            it’s <br />
-            made?
+            how it’s made?
           </h2>
           <div class="about__cow"></div>
-          <p class="about__text">
-            Ice is a place where you will become not only a little happier, but
-            also healthier. Health is the main value for us, and we follow it
-            when creating our handmade desserts.
-          </p>
-
-          <p class="about__text">
-            We use traditional recipes and 100% natural ingredients. Our
-            products are so natural that they can be given to children from the
-            age of three years. Sweets lovers can expect 55 types of ice cream,
-            15 types of coffee and 23 milkshakes.
-          </p>
-          <button class="about__btn" type="button" data-modal-open2>
-            Read more
-            <svg
-              class="icon-button"
-              width="14"
-              height="14"
-              aria-label="button of mobile menu Read more"
-            >
-              <use href="./images/icon.svg#icon-ep_arrow-right-bold"></use>
-            </svg>
-          </button>
+            <p class="about__text">
+              Ice is a place where you will become not only a little happier,
+              but also healthier. Health is the main value for us, and we follow
+              it when creating our handmade desserts.
+            </p>
+            <p class="about__text">
+              We use traditional recipes and 100% natural ingredients. Our
+              products are so natural that they can be given to children from
+              the age of three years. Sweets lovers can expect 55 types of ice
+              cream, 15 types of coffee and 23 milkshakes.
+            </p>
+            <p class="about__text">
+              This is enough to choose ice cream and coffee for any mood!</p>
+            <button class="about__btn" type="button" data-modal-open2>
+              Read more
+              <svg
+                class="icon-button"
+                width="14"
+                height="14"
+                aria-label="button of mobile menu Read more"
+              >
+                <use href="./images/icon.svg#icon-ep_arrow-right-bold"></use>
+              </svg>
+            </button>
         </div>
       </section>
 
@@ -403,7 +501,7 @@
       </section>
 
       <!-- Customer -->
-      <section class="customer">
+      <section class="customer" id="customer">
         <div class="container">
           <h2 class="visually-hidden">Customer reviews</h2>
           <div class="gallery autoplay items-3">
@@ -607,10 +705,7 @@
     <footer class="footer">
       <div class="container">
         <p class="footer__text">homemade ice cream made</p>
-        <p class="footer__passion">
-          with <br />
-          passion
-        </p>
+        <p class="footer__passion">with passion</p>
 
         <ul class="footer-social list">
           <li class="footer-social__item">
@@ -650,6 +745,7 @@
             </a>
           </li>
         </ul>
+
         <div class="footer__feelfree">
           <p class="footer__contact">Feel free to contact</p>
           <a href="tel:+610383766284" class="footer__tel link"
@@ -657,8 +753,10 @@
           >
         </div>
         <div class="footer__line"></div>
-        <p class="footer__icecream">&copy; 2022 - IceCream.</p>
-        <p class="footer__icecream">All Rights Reserved.</p>
+        <div class="footer__position">
+          <p class="footer__icecream">&copy; 2022 - IceCream.</p>
+          <p class="footer__icecream">All Rights Reserved.</p>
+        </div>
       </div>
     </footer>
 
@@ -759,7 +857,6 @@
     <!-- МОДАЛЬНЕ ВІКНО PRODUCTS-->
     <div class="backdrop1 is-hidden1" data-modal1>
       <div class="modal1">
-        <!-- тут динамічно змінити назву морозива data-change-name -->
         <h2 class="modal1__title" data-change-name>ice cream</h2>
         <button type="button" class="modal1__button" data-modal-close1>
           <svg width="18" height="18">
@@ -867,8 +964,6 @@
 
         <iframe
           class="modal2__video"
-          width="224"
-          height="199"
           src="https://www.youtube.com/embed/_Zt1EuIEhvw"
           title="Homemade Ice Cream Without a Machine in Just 5 Minutes"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -893,31 +988,14 @@
             <use href="./images/icon.svg#icon-vector-3"></use>
           </svg>
         </button>
-        <!-- <picture>
-
-</picture> -->
+ 
         <img
           class="modal3__img"
           srcset="./images/rectangle@1x.jpg 1x, ./images/rectangle@2x.jpg 2x"
           src="./images/rectangle@1x.jpg"
           alt="Map Our Locations"
         />
-        <!-- <picture>
-          <source srcset="./images/hero/big-ice-cream-desktop-1x.png 1x,
-                            ./images/hero/big-ice-cream-desktop-2x.png 2x,
-                            ./images/hero/big-ice-cream-desktop-3x.png 3x" media="(min-width: 1200px)">
-          <source srcset="./images/hero/big-ice-cream-tablet-1x.png 1x,
-                            ./images/hero/big-ice-cream-tablet-2x.png 2x,
-                            ./images/hero/big-ice-cream-tablet-3x.png 3x" media="(min-width: 768px)">
-          <source srcset="./images/hero/big-ice-cream-480px-1x.png 1x,
-                            ./images/hero/big-ice-cream-480px-2x.png 2x,
-                            ./images/hero/big-ice-cream-480px-3x.png 3x" media="(min-width: 480px)">
-          <source srcset="./images/hero/big-ice-cream-mobile-1x.png 1x,
-                            ./images/hero/big-ice-cream-mobile-2x.png 2x,
-                            ./images/hero/big-ice-cream-mobile-3x.png 3x">
-          <img class="hero__image hero__image--cone animate__animated animate__zoomIn"
-            src="./images/hero/big-ice-cream-mobile-1x.png" alt="ice cream cone">
-        </picture> -->
+
         <a
           class="modal3__link link"
           href="https://goo.gl/maps/Gp12fhm3RYRaatEZ8"

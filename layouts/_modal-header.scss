@@ -3,12 +3,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  //  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  // visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  transition: opacity 250ms linear, visibility 250ms linear;
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -20,11 +19,11 @@
   position: absolute;
   overflow: auto;
   width: 280px;
-  z-index: 2;
+  // z-index: 2;
   //  height: 991px;
-  height: 100vh;
+  height: 95%;
   padding: 28px;
-  top: 0;
+  top: 2.5%;
   left: 50%;
   transform: translate(-50%, 0);
 
@@ -38,9 +37,15 @@
   //     max-width: 100vw;
   //     max-height: 100vh;
   // }
+  @include tablet {
+    width: 568px;
+    padding: 32px 54px;
+    height: 644px;
+  }
 
   &__title {
-    padding-bottom: 23px;
+    //   padding-bottom: 23px;
+    margin-bottom: 20px;
     font-family: 'Seymour One';
     font-style: normal;
     font-weight: 400;
@@ -48,6 +53,9 @@
     line-height: 1.5;
     text-align: center;
     color: #131313;
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__button {
@@ -61,23 +69,40 @@
     background-color: transparent;
     color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    @include tablet {
+      top: 17px;
+      right: 17px;
+    }
   }
 }
 
 .cards {
   margin-top: 83px;
   margin-bottom: 32px;
+  @include tablet {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
 
   &__item {
     position: relative;
     margin-bottom: 82px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 95px;
+    // padding-top: 95px;
     padding-bottom: 20px;
     width: 132px;
     height: 136px;
     border-radius: 10px;
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item:last-child {
+    background-color: #fcfcfc;
+    margin-bottom: 0;
   }
 
   .cards__item input[type='checkbox'] {
@@ -89,24 +114,15 @@
     height: 190px;
   }
 
-  .cards__input:checked + .cards__label {
-    color: blue;
-    background-color: #96af8c;
-  }
-
-  &__item:last-child {
-    margin-bottom: 0;
-  }
-
   &__item--bg1 {
-    background-color: #fcfcfc; // #aec6a5;
+    // background-color: #fcfcfc; // #aec6a5;
     border: 2px solid #96af8c;
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
     border-radius: 15px;
   }
 
   &__item--bg2 {
-    background-color: #efd478;
+    // background-color:#d9d9d9;
     border: 2px solid #efd478;
     box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
     border-radius: 15px;
@@ -114,10 +130,26 @@
 
   &__item--bg3 {
     // background-color: #fcfcfc;
-    background-color: rgba(212, 20, 67, 0.1);
     border: 2px solid #d6936d;
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
     border-radius: 15.7808px;
+  }
+
+  // .cards__input:checked + .cards__label {
+  //   color: blue;
+  //   background-color: #96af8c;
+  // }
+
+  #ice-cream:checked + &__label {
+    background-color: #96af8c;
+  }
+
+  #ice-coffee:checked + &__label {
+    background-color: #efd478;
+  }
+
+  #milkshakes:checked + &__label {
+    background-color: #d6936d;
   }
 
   &__item::before {
@@ -201,119 +233,23 @@
     }
   }
 
-  // &__label {
-  //   display: block;
-  //   margin-left: auto;
-  //   margin-right: auto;
-
-  //   font-weight: 700;
-  //   font-size: 16px;
-  //   line-height: calc(20 / 16);
-  //   text-align: center;
-  //   text-transform: uppercase;
-  //   color: #131313;
-  // }
+  &__label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 95px;
+    padding-bottom: 38px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+    transition: background-color 250ms linear;
+  }
 }
 
-
 @import '../base/_submit';
-
-// .modal-form {
-
-//   width: 100%;
-
-//   &__field { 
-//      position: relative;
-//     margin-bottom: 12px;
-//     width: 100%;
-//   }
-
-//   &__field:focus-within &__input,
-//   &__field:focus-within &__comment {
-//     border: none;
-//     outline: 2px solid #f8d24e;
-//   }
-
- 
-
-//   &__input {
-//     width: 100%;
-//     // height: 32px;
-//     padding: 8px 12px;
-//     font-weight: 400;
-//     font-size: 12px;
-//     line-height: 1.4;
-//     color: #131313;
-//     background: rgba(248, 210, 78, 0.1);
-//     border: 1px solid #84a178;
-//     border-radius: 10px;
-//   }
-
-//   // &__input::placeholder {}
-
-//   // &__input:required {}
-
-//   &__input:not(:focus):not(:placeholder-shown):required:valid {
-//     border-color: green;
-//   }
-
-//   &__input:not(:focus):not(:placeholder-shown):required:invalid {
-//     border-color: red;
-//   }
-
-//   &__input:focus + &__label,
-//   &__input:not(:placeholder-shown) + &__label {
-//     transform: translateY(-30px);
-//   }
-
-//  &__label {
-//    position: absolute;
-//    top: 50%;
-//    left: 12px;
-//    transform: translateY(-50%);
-//   // background-color: tomato;
-//    font-weight: 400;
-//    font-size: 12px;
-//    line-height: 1.4;
-//    color: #131313;
-//  }
-
-//   // &__span {
-//   //   padding-left: 12px;
-//   //   font-size: 12px;
-//   //   line-height: 1.4;
-//   //   color: #131313;
-//   // }
-
-//   &__comment {
-//     padding: 8px 12px;
-//     width: 100%;
-//     min-height: 65px;
-//     max-height: 130px;
-//     resize: vertical;
-//     // transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//     font-weight: 400;
-//     font-size: 12px;
-//     line-height: 1.4;
-//     color: #131313;
-//     background: rgba(248, 210, 78, 0.1);
-//     border: 1px solid #84a178;
-//     border-radius: 10px;
-//   }
-// }
-
-// .submit {
-//   margin-top: 26px;
-//   width: 114px;
-//   height: 42px;
-//   background: #f8d24e;
-//   border-radius: 10px;
-//   display: flex;
-//   //    text-align: center;
-//   margin-left: auto;
-//   margin-right: auto;
-//   justify-content: center;
-//   border: none;
-//   padding: 12px 34px;
-// }

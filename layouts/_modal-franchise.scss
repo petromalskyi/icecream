@@ -6,9 +6,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  //  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  // visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: opacity 250ms linear, visibility 250ms linear;
   &.is-hidden4 {
     opacity: 0;
     pointer-events: none;
@@ -20,33 +18,35 @@
   position: absolute;
   overflow: auto;
   width: 280px;
-  // max-height: 968px;
-  //  max-height: 90vh;
-  max-height: 90%;
+
+  max-height: 95%;
   padding: 28px 20px;
-  top: 5%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   //  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
-
-  // @media screen and (max-width: 479px) {
-  //     max-width: 100vw;
-  //     max-height: 100vh;
-  // }
+  @include tablet {
+    width: 568px;
+    padding: 32px 60px;
+  }
 
   &__title {
     margin-bottom: 20px;
     font-family: 'Seymour One';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
     color: #131313;
+    @include tablet {
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
   }
 
   &__button {
@@ -60,6 +60,10 @@
     background-color: transparent;
     color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    @include tablet {
+      top: 17px;
+      right: 17px;
+    }
   }
 
   &__text {
@@ -67,9 +71,11 @@
     font-size: 14px;
     line-height: 2;
     color: #131313;
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.4;
+    }
   }
 }
 
 @import '../base/_submit';
-
-

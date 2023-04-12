@@ -1,6 +1,15 @@
 .footer {
+  position: relative;
   padding-bottom: 20px;
   background-color: #84a178;
+  @include tablet {
+    height: 265px;
+    padding-bottom: 12px;
+  }
+  @include desktop {
+    height: 226px;
+    padding-bottom: 12px;
+  }
 
   &__text {
     margin-bottom: 16px;
@@ -9,23 +18,63 @@
     line-height: calc(22 / 18);
     text-transform: uppercase;
     color: #fcfcfc;
-    // text-align: center;
+    @include tablet {
+      position: absolute;
+      top: 0;
+      left: 32px;
+      width: 352px;
+      font-size: 26px;
+      line-height: calc(36 / 26);
+      letter-spacing: 0.04em;
+    }
+    @include desktop {
+      width: 504px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
   }
 
   &__passion {
     margin-bottom: 60px;
+    width: 200px;
     font-weight: 700;
     font-size: 34px;
     line-height: calc(41 / 34);
     text-transform: uppercase;
     color: #fcfcfc;
-    // text-align: center;
+
+    @include tablet {
+      position: absolute;
+      top: 70px;
+      left: 32px;
+      width: 352px;
+      font-size: 48px;
+      line-height: calc(59 / 48);
+      letter-spacing: 0.06em;
+    }
+    @include desktop {
+      top: 51px;
+      width: 500px;
+      font-size: 58px;
+      line-height: calc(71 / 58);
+    }
   }
 
   &__feelfree {
     display: flex;
     justify-content: end;
     margin-bottom: 40px;
+    @include tablet {
+      position: absolute;
+      top: 130px;
+      left: 451px;
+    }
+    @include desktop {
+      top: 92px;
+     // left: 846px;
+     right: 16px;
+    }
   }
 
   &__contact {
@@ -34,8 +83,14 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 1.86;
-
     color: #131313;
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__tel {
@@ -44,12 +99,38 @@
     font-size: 12px;
     line-height: 1.86;
     color: #fcfcfc;
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__line {
-    margin-left: -40px;
+ 
+    // margin-left: -40px;
+    
     margin-bottom: 20px;
-    border: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    @include tablet {
+      width: 768px;
+      margin-bottom: 12px;
+      padding-top: 215px;
+    }
+            @include desktop {
+              width: 1200px;
+              margin-bottom: 12px;
+              padding-top: 182px;
+            }
+  }
+  &__position {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__icecream {
@@ -58,13 +139,32 @@
     line-height: 1.52;
     text-align: center;
     color: #7a7a7a;
+    @include tablet {
+    }
+
+    @include desktop {
+      font-size: 12px;
+    }
   }
 }
 
 .footer-social {
+
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
+  @include tablet {
+    position: absolute;
+    top: 61px;
+    //left: 574px;
+    right: 32px;
+  }
+  @include desktop {
+    //   position: absolute;
+    top: 18px;
+   // left: 1022px;
+   right: 16px;
+  }
 
   &__item {
     margin-right: 20px;

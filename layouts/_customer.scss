@@ -222,18 +222,27 @@
   (min-resolution: 2dppx) {
     background-image: url(../images/backgroud_mobile2@2x.jpg);
   }
+
+  
 }
 
 .customer__img {
   margin-bottom: 32px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+ // display: block;
   border-radius: 50%;
 
   @include mobile {
     margin-top: 80px; //178px;
   }
+    @include tablet {
+      margin-top: 100px; //283px;
+    }
+  
+    @include desktop {
+      margin-top: 300px; //464px;
+    }
 
 }
 
@@ -253,10 +262,14 @@
 }
 
 .customer__name {
-  margin-bottom: 64px;
+ // margin-bottom: 64px;
+ padding-bottom: 433px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.86;
   text-align: center;
   color: #131313;
+  @include desktop {
+    padding-bottom: 228px;
+  }
 }

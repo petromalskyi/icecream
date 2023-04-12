@@ -19,6 +19,14 @@
     text-align: center;
     text-transform: uppercase;
     color: #131313;
+    @include tablet {
+      font-size: 22px;
+      line-height: calc(27 / 22);
+    }
+    @include desktop {
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
   }
 
   &__title {
@@ -32,22 +40,59 @@
     // letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #131313;
+    @include tablet {
+      margin-bottom: 200px;
+      font-size: 34px;
+      line-height: calc(43 / 34);
+    }
+    @include desktop {
+      margin-bottom: 303px;
+      font-size: 36px;
+      line-height: calc(44 / 36);
+    }
   }
 }
 
 .products-cards {
-     
+  @include tablet {
+    display: flex;
+    gap: 19px;
+  }
+  @include desktop {
+    gap: 29px;
+  }
+
   &__item {
     position: relative;
     margin-bottom: 168px;
     margin-right: auto;
     margin-left: auto;
- 
-    
-    padding: 100px 40px 16px;
+    padding-left: 40px;
+    padding-right: 40px;
     width: 280px;
     height: 420px;
+
+    padding: 100px 40px 16px;
     border-radius: 24px;
+
+    @include mobile {
+      width: 320px;
+      height: 428px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+    @include tablet {
+      width: 224px;
+      margin-bottom: 0;
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+    @include desktop {
+      width: 370px;
+      height: 536px;
+      padding-left: 64px;
+      padding-right: 64px;
+    }
   }
   &__item:last-child {
     margin-bottom: 0;
@@ -73,8 +118,13 @@
     height: 211px;
     border-radius: 50%;
     top: -108px;
-
-  
+    left: 50%;
+    translate: -50%;
+    @include desktop {
+      top: -183px;
+      width: 302px;
+      height: 315px;
+    }
   }
 
   &__item--bg-ellipse1::before {
@@ -84,7 +134,7 @@
         rgba(156, 190, 143, 0.7)
       ),
       #d9d9d9;
-    box-shadow: 0px 5.34219px 20.0332px  rgba(10, 136, 23, 0.25);
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
   }
 
   &__item--bg-ellipse2::before {
@@ -94,7 +144,7 @@
         rgba(248, 210, 78, 0.7)
       ),
       #d9d9d9;
-    box-shadow: 0px 5.40397px 20.2649px  rgba(153, 114, 23, 0.25);
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
   }
   &__item--bg-ellipse3::before {
     background-image: linear-gradient(
@@ -103,7 +153,7 @@
         rgba(213, 117, 63, 0.7)
       ),
       #d9d9d9;
-    box-shadow: 0px 5.41333px 20.3px  rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
   }
 
   &__img::after {
@@ -112,6 +162,7 @@
     display: block;
     width: 200px;
     height: 200px;
+
     background-repeat: no-repeat;
     background-position: center;
     transition: transform 250ms linear;
@@ -119,9 +170,14 @@
     background-size: cover;
     border-radius: 50%;
     top: -108px;
-    
+    left: 50%;
+    translate: -50%;
+    @include desktop {
+      top: -183px;
+      width: 302px;
+      height: 302px;
+    }
   }
-    
 
   &__img--img1::after {
     background-image: url(../images/kelsey-curtis@1x.jpg);
@@ -129,6 +185,15 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/kelsey-curtis@2x.jpg);
+    }
+    @include desktop {
+      background-image: url(../images/kelsey-curtis1200@1x.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/kelsey-curtis1200@2x.jpg);
+      }
     }
   }
 
@@ -160,6 +225,18 @@
     text-align: center;
     text-transform: uppercase;
     color: #131313;
+    @include tablet {
+      margin-top: 30px;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: calc(27 / 22);
+    }
+    @include desktop {
+      margin-top: 56px;
+      margin-bottom: 66px;
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
   }
 
   &__text {
@@ -169,33 +246,33 @@
     line-height: 1.76;
     text-align: center;
     color: #131313;
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__btn {
-    // margin-bottom: 16px;
     position: absolute;
     bottom: 16px;
-    left: 120px;
+    left: 50%;
+    translate: -50%;
     display: inline-block;
-  
-    //  background-color: tomato;
     background-color: inherit;
     margin-left: auto;
     margin-right: auto;
     border: none;
   }
 
-   &__arrow {
+  &__arrow {
     transition: transform 250ms linear;
-   }
+  }
 
-   &__arrow:hover {
+  &__arrow:hover {
     transform: scale(1.25);
-   }
+  }
 }
 
- .products-cards__item:hover .products-cards__img::after {
-
-//   top: -99px;
-transform: translateY(11px) ;
- }
+.products-cards__item:hover .products-cards__img::after {
+  //   top: -99px;
+  transform: translateY(11px);
+}

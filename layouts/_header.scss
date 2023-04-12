@@ -6,6 +6,18 @@
   // height: 100vh;
   height: 502px;
 
+  @include mobile {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
+
   @keyframes changeScaleIcecream {
     0% {
       scale: 0.25;
@@ -44,29 +56,74 @@
     height: 415px; //100vh
   }
 
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+    height: 664px;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 46px;
+    @include mobile {
+      margin-bottom: 36px;
+    }
+    @include tablet {
+      margin-bottom: 12px;
+    }
+    @include desktop {
+      margin-bottom: 40px;
+    }
+  }
+
   &__position {
-    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
-    
   }
 
-  &__logo-ce {
-    position: absolute;
-    top: 39px;
-    left: 35px;
+  &__logotype {
+    width: 40px;
+    height: 37px;
+
+    @include mobile {
+      width: 48px;
+      height: 44px;
+    }
+
+    @include desktop {
+      width: 60px;
+      height: 65px;
+    }
   }
+
+  // &__logo-ce {
+  //   position: absolute;
+  //   top: 41px;
+  //   left: 35px;
+  //   @include tablet {
+  //     left: 48px;
+  //   }
+  //   @include desktop {
+  //     top: 55px;
+  //     left: 34px;
+  //   }
+  // }
 
   .menu-button {
-    position: absolute;
-    top: 22px;
-    right: 26px;
-    margin: 0;
-    padding: 0;
     background-color: transparent;
     cursor: pointer;
     border: none;
     outline: none;
+    @include tablet {
+      margin-left: 440px;
+    }
+    @include desktop {
+      display: none;
+    }
   }
 
   &__title {
@@ -85,7 +142,9 @@
   }
 
   &__products {
+    display: inline-block;
     margin-right: 12px;
+    margin-bottom: 12px;
     padding: 11px 26px;
     transition: border-color 250ms linear;
     font-weight: 600;
@@ -102,7 +161,8 @@
   }
 
   &__made {
-    margin-bottom: 26px;
+    display: inline-block;
+
     transition: color 250ms linear;
     font-weight: 600;
     font-size: 12px;
@@ -129,6 +189,9 @@
     @include mobile {
       left: 155px;
     }
+    @include tablet {
+      left: 0px;
+    }
   }
 
   &__mobile {
@@ -139,14 +202,207 @@
 
     animation-name: changeScaleIcecream;
     animation-duration: 1000ms;
+
     @include mobile {
       left: 242px;
+    }
+    @include tablet {
+      left: 408px;
+    }
+    @include desktop {
+      left: 652px;
+    }
+  }
+
+  &__down-position {
+    display: flex;
+    align-items: center;
+  }
+
+  &__many-ice {
+    display: none;
+    position: absolute;
+    bottom: 12px;
+    left: 32px;
+    border-radius: 50%;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      left: 16px;
+      bottom: 65px;
+    }
+  }
+
+  &__block {
+  }
+
+  &__block-text {
+    display: none;
+    position: absolute;
+    // padding: 0;
+    // margin: 0;
+    width: 165px;
+    left: 216px;
+    bottom: 69px;
+
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #ffffff;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      width: 210px;
+      left: 257px;
+      bottom: 143px;
+      font-size: 14px;
+    }
+  }
+
+  &__block-arrow {
+    fill: #fcfcfc;
+    display: none;
+    position: absolute;
+    left: 216px;
+    bottom: 32px;
+    @include tablet {
+      display: block;
+    }
+    @include desktop {
+      left: 257px;
+      bottom: 111px;
+    }
+  }
+
+  &__side1 {
+    display: none;
+    position: absolute;
+    top: 94px;
+    right: 32px;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: calc(34 / 28);
+    text-transform: uppercase;
+    color: #131313;
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      right: 16px;
+      top: 126px;
+      font-size: 46px;
+      line-height: calc(56 / 46);
+    }
+  }
+
+  &__side2 {
+    display: none;
+    position: absolute;
+    top: 132px;
+    right: 32px;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    color: #fcfcfc;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      right: 16px;
+      top: 186px;
+      font-size: 14px;
+      line-height: calc(17 / 14);
+    }
+  }
+
+  &__side3 {
+    display: none;
+    position: absolute;
+    top: 162px;
+    right: 32px;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: calc(34 / 28);
+    text-transform: uppercase;
+    color: #131313;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      right: 16px;
+      top: 219px;
+      font-size: 46px;
+      line-height: calc(56 / 46);
+    }
+  }
+
+  &__side4 {
+    display: none;
+    position: absolute;
+    top: 200px;
+    right: 32px;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    color: #fcfcfc;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      right: 16px;
+      top: 279px;
+      font-size: 14px;
+      line-height: calc(17 / 14);
     }
   }
 }
 
+// меню для десктоп
+.main-menu {
+  margin-left: 110px;
+  display: flex;
+  text-align: center;
+  &__item {
+    margin-right: 28px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: #fcfcfc;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: #f8d24e;
+    cursor: url(../images/vector-cursor.svg), auto;
+  }
+}
+
 .menu-container {
-  // z-index: 0;
+  // z-index: 1;
   position: fixed;
   overflow: auto;
   top: 0;
@@ -157,7 +413,7 @@
   padding: 12px 20px 64px 20px;
   //background-color: #817C7C;
   background-color: #84a178;
-  z-index: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -177,7 +433,14 @@
 }
 
 .mobile-menu {
+  margin-top: 45px;
   margin-bottom: 90px;
+  @include mobile {
+    margin-top: 35px;
+  }
+  @include tablet {
+    margin-top: 0px;
+  }
 
   &__item {
     margin-bottom: 32px;
@@ -207,19 +470,32 @@
 }
 
 .button-menu {
-  margin: 0 auto;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  padding: 12px 41px 12px 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 0 auto;
+  padding: 12px 51px 12px 36px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 12px 41px 12px 36px;
+
   color: #000000;
   background-color: #f8d24e;
   border-radius: 10px;
   border-color: #f8d24e;
+  cursor: pointer;
+}
+
+.button-menu--main {
+  @include tablet {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .button-menu:hover {
