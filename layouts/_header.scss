@@ -236,10 +236,10 @@
     }
   }
 
-  &__block {
-  }
+  // &__block {
+  // }
 
-  &__block-text {
+  .header__block-text {
     display: none;
     position: absolute;
     // padding: 0;
@@ -266,7 +266,7 @@
     }
   }
 
-  &__block-arrow {
+  .header__block-arrow {
     fill: #fcfcfc;
     display: none;
     position: absolute;
@@ -402,7 +402,7 @@
 }
 
 .menu-container {
-   z-index: 1;
+  z-index: 1;
   position: fixed;
   overflow: auto;
   top: 0;
