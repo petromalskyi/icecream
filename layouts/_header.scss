@@ -2,8 +2,7 @@
   position: relative;
   padding-top: 12px;
   background-color: #84a178;
-  max-width: 320px; //480
-  // height: 100vh;
+  max-width: 320px; 
   height: 502px;
 
   @include mobile {
@@ -35,21 +34,6 @@
       scale: 1;
     }
   }
-
-  //   height: 502px;
-  //   width: 100vh;
-
-  //   @media screen and (max-width: 1199px) {
-  //     width: $tablet;
-  //   }
-
-  //   @media screen and (max-width: 767px) {
-  //     width: $mobile;
-  //   }
-
-  //   @media screen and (max-width: 479px) {
-  //     width: 100%;
-  //   }
 
   @include mobile {
     max-width: 480px;
@@ -99,19 +83,6 @@
       height: 65px;
     }
   }
-
-  // &__logo-ce {
-  //   position: absolute;
-  //   top: 41px;
-  //   left: 35px;
-  //   @include tablet {
-  //     left: 48px;
-  //   }
-  //   @include desktop {
-  //     top: 55px;
-  //     left: 34px;
-  //   }
-  // }
 
   .menu-button {
     background-color: transparent;
@@ -198,10 +169,10 @@
     position: absolute;
     bottom: 0;
     left: 83px;
-    //    transition: transform 500ms linear;
 
     animation-name: changeScaleIcecream;
     animation-duration: 1000ms;
+     
 
     @include mobile {
       left: 242px;
@@ -428,7 +399,6 @@
 .position-menu {
   display: flex;
   justify-content: space-between;
-  // margin-bottom: 40px;
 }
 
 .mobile-menu {

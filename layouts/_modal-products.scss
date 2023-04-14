@@ -116,15 +116,36 @@
     transform: translate(-50%, 0);
     transition: transform 250ms linear;
     background-size: cover;
-    background-image: url(../images/ellipse67@1x.jpg);
+
+    @include tablet {
+      top: 84px;
+    }
+  }
+  &__img--img1::after {
+    //    background-image: url(../images/ellipse67@1x.jpg);
+    background-image: url(../images/kelsey-curtis@1x.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      // background-image: url(../images/ellipse67@2x.jpg);
+      background-image: url(../images/kelsey-curtis@2x.jpg);
+    }
+  }
+  &__img--img2::after {
+    background-image: url(../images/pariwat-pannium@1x.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/pariwat-pannium@2x.jpg);
+    }
+  }
+  &__img--img3::after {
+    background-image: url(../images/victor-rutka@1x.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/ellipse67@2x.jpg);
-    }
-    @include tablet {
-      top: 84px;
+      background-image: url(../images/victor-rutka@2x.jpg);
     }
   }
 }
@@ -239,9 +260,9 @@
 
   &__item:hover &__units {
     transform: translate(-50%, -39px);
-  }
-  @include tablet {
-    transform: translateY(-49px);
+    @include tablet {
+      transform: translate(-50%, -49px);
+    }
   }
 }
 

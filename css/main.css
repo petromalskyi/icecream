@@ -2468,16 +2468,34 @@ ul {
   transform: translate(-50%, 0);
   transition: transform 250ms linear;
   background-size: cover;
-  background-image: url(../images/ellipse67@1x.jpg);
-}
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .modal1__img::after {
-    background-image: url(../images/ellipse67@2x.jpg);
-  }
 }
 @media screen and (min-width: 768px) {
   .modal1__img::after {
     top: 84px;
+  }
+}
+.modal1__img--img1::after {
+  background-image: url(../images/kelsey-curtis@1x.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal1__img--img1::after {
+    background-image: url(../images/kelsey-curtis@2x.jpg);
+  }
+}
+.modal1__img--img2::after {
+  background-image: url(../images/pariwat-pannium@1x.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal1__img--img2::after {
+    background-image: url(../images/pariwat-pannium@2x.jpg);
+  }
+}
+.modal1__img--img3::after {
+  background-image: url(../images/victor-rutka@1x.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal1__img--img3::after {
+    background-image: url(../images/victor-rutka@2x.jpg);
   }
 }
 
@@ -2589,8 +2607,8 @@ ul {
   transform: translate(-50%, -39px);
 }
 @media screen and (min-width: 768px) {
-  .modal1-info {
-    transform: translateY(-49px);
+  .modal1-info__item:hover .modal1-info__units {
+    transform: translate(-50%, -49px);
   }
 }
 
