@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 12px;
   background-color: #84a178;
-  max-width: 320px; 
+  max-width: 320px;
   height: 502px;
 
   @include mobile {
@@ -154,7 +154,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    // transition: transform 500ms linear;
     animation-name: changeScalePoints;
     animation-duration: 1000ms;
     @include mobile {
@@ -172,7 +171,6 @@
 
     animation-name: changeScaleIcecream;
     animation-duration: 1000ms;
-     
 
     @include mobile {
       left: 242px;
@@ -389,7 +387,7 @@
   justify-content: space-between;
 
   transform: translateX(-150%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms linear;
 }
 
 .menu-container.is-open {

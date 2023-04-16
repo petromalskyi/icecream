@@ -2,17 +2,20 @@
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100vw;
   height: 100vh;
+
   background-color: rgba(192, 40, 40, 0.2);
-   transition: opacity 250ms linear,
-   visibility 250ms linear;
+  transition: opacity 250ms linear;
 
   &.is-hidden3 {
     opacity: 0;
     pointer-events: none;
     transform: translate(-100%, -100%);
+  }
+
+  &.is-hidden3 .modal3 {
+    transform: translate(-50%, 0) scale(0.8);
   }
 }
 
@@ -24,7 +27,9 @@
   padding: 28px 20px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;

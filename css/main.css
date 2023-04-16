@@ -588,7 +588,7 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(-150%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms linear;
 }
 
 .menu-container.is-open {
@@ -2060,12 +2060,15 @@ ul {
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   transform: translate(-100%, -100%);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, 0) scale(0.8);
 }
 
 .modal {
@@ -2076,7 +2079,8 @@ ul {
   padding: 28px;
   top: 2.5%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0) scale(1);
+  transition: transform 250ms linear;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
@@ -2254,7 +2258,7 @@ ul {
   text-align: center;
   text-transform: uppercase;
   color: #131313;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms;
 }
 
 .modal-form {
@@ -2369,12 +2373,15 @@ ul {
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear;
 }
 .backdrop1.is-hidden1 {
   opacity: 0;
   pointer-events: none;
   transform: translate(-100%, -100%);
+}
+.backdrop1.is-hidden1 .modal1 {
+  transform: translate(-50%, 0) scale(0.8);
 }
 
 .modal1 {
@@ -2385,7 +2392,8 @@ ul {
   padding: 28px 20px;
   top: 2.5%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0) scale(1);
+  transition: transform 250ms linear;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
@@ -2742,12 +2750,15 @@ ul {
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear;
 }
 .backdrop2.is-hidden2 {
   opacity: 0;
   pointer-events: none;
   transform: translate(-100%, -100%);
+}
+.backdrop2.is-hidden2 .modal2 {
+  transform: translate(-50%, 0) scale(0.8);
 }
 
 .modal2 {
@@ -2758,7 +2769,8 @@ ul {
   padding: 28px 20px;
   top: 5%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0) scale(1);
+  transition: transform 250ms linear;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
@@ -2830,12 +2842,15 @@ ul {
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear;
 }
 .backdrop3.is-hidden3 {
   opacity: 0;
   pointer-events: none;
   transform: translate(-100%, -100%);
+}
+.backdrop3.is-hidden3 .modal3 {
+  transform: translate(-50%, 0) scale(0.8);
 }
 
 .modal3 {
@@ -2846,7 +2861,8 @@ ul {
   padding: 28px 20px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
@@ -2933,12 +2949,15 @@ ul {
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear;
 }
 .backdrop4.is-hidden4 {
   opacity: 0;
   pointer-events: none;
   transform: translate(-100%, -100%);
+}
+.backdrop4.is-hidden4 .modal4 {
+  transform: translate(-50%, 0) scale(0.8);
 }
 
 .modal4 {
@@ -2949,7 +2968,8 @@ ul {
   padding: 28px 20px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;

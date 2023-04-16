@@ -26,6 +26,8 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
   refs.backdropEl.addEventListener('click', onBackdropClick);
 
+  //document.addEventListener('keydown', onEscapePress);
+
   function changeImg() {
     refs.changeImgEl.classList.remove('modal1__img--img1');
     refs.changeImgEl.classList.remove('modal1__img--img2');
@@ -60,4 +62,11 @@
       toggleModal();
     }
   }
+
+  // function onEscapePress(event) {
+  //   if (event.code === 'Escape') {
+  //     // document.removeEventListener('keydown', onEscapePress);
+  //     toggleModal();
+  //   }
+  // }
 })();

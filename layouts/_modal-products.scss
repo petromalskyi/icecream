@@ -3,16 +3,20 @@
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100vw;
   height: 100vh;
+
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear;
 
   &.is-hidden1 {
     opacity: 0;
     pointer-events: none;
     transform: translate(-100%, -100%);
+  }
+
+  &.is-hidden1 .modal1 {
+    transform: translate(-50%, 0) scale(0.8);
   }
 }
 
@@ -20,14 +24,12 @@
   position: absolute;
   overflow: auto;
   width: 280px;
-
-  // max-height: 968px;
-  //  max-height: 90vh;
   max-height: 95%;
   padding: 28px 20px;
   top: 2.5%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0) scale(1);
+  transition: transform 250ms linear;
 
   background: #fcfcfc;
   border: 2px solid #f8d24e;
@@ -131,6 +133,7 @@
       background-image: url(../images/kelsey-curtis@2x.jpg);
     }
   }
+
   &__img--img2::after {
     background-image: url(../images/pariwat-pannium@1x.jpg);
     @media (min-device-pixel-ratio: 2),

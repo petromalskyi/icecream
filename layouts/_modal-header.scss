@@ -6,13 +6,19 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(192, 40, 40, 0.2);
 
-  transition: opacity 250ms linear, visibility 250ms linear;
+  background-color: rgba(192, 40, 40, 0.2);
+  transition: opacity 250ms linear;
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
     transform: translate(-100%, -100%);
+    // transition: opacity 2500ms linear;
+  }
+
+  &.is-hidden .modal {
+    transform: translate(-50%, 0) scale(0.8);
   }
 }
 
@@ -20,15 +26,12 @@
   position: absolute;
   overflow: auto;
   width: 280px;
-  // z-index: 2;
-  //  height: 991px;
   height: 95%;
   padding: 28px;
   top: 2.5%;
   left: 50%;
-  transform: translate(-50%, 0);
-
-
+  transform: translate(-50%, 0) scale(1);
+  transition: transform 250ms linear;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
@@ -125,7 +128,6 @@
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
     border-radius: 15.7808px;
   }
-
 
   #ice-cream:checked + &__label {
     background-color: #96af8c;
@@ -235,7 +237,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #131313;
-    transition: background-color 250ms linear;
+    transition: background-color 250ms;
   }
 }
 
