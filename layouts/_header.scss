@@ -68,6 +68,9 @@
     display: flex;
     justify-content: space-between;
   }
+  &__position:hover {
+    cursor: url(../images/vector-cursor.svg), auto;
+  }
 
   &__logotype {
     width: 40px;
@@ -129,6 +132,11 @@
 
   &__products:hover {
     border-color: #0a8817;
+    cursor: url(../images/vector-cursor.svg), auto;
+  }
+
+  &__products:focus {
+    color: #fcfcfc;
   }
 
   &__made {
@@ -145,6 +153,7 @@
 
   &__made:hover {
     color: #0a8817;
+    cursor: url(../images/vector-cursor.svg), auto;
   }
   &__made:focus {
     color: #ffffff;
@@ -248,6 +257,10 @@
       left: 257px;
       bottom: 111px;
     }
+  }
+
+  .header__block-arrow:hover {
+    cursor: url(../images/vector-cursor.svg), auto;
   }
 
   &__side1 {
@@ -468,7 +481,7 @@
 .button-menu:hover {
   background-color: #0a8817;
   border: none;
-  //   border-color: #0a8817;
+  cursor: url(../images/vector-cursor.svg), auto;
 }
 
 .button-menu:focus {

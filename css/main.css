@@ -270,6 +270,9 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+.header__position:hover {
+  cursor: url(../images/vector-cursor.svg), auto;
+}
 .header__logotype {
   width: 40px;
   height: 37px;
@@ -331,6 +334,10 @@ ul {
 }
 .header__products:hover {
   border-color: #0a8817;
+  cursor: url(../images/vector-cursor.svg), auto;
+}
+.header__products:focus {
+  color: #fcfcfc;
 }
 .header__made {
   display: inline-block;
@@ -344,6 +351,7 @@ ul {
 }
 .header__made:hover {
   color: #0a8817;
+  cursor: url(../images/vector-cursor.svg), auto;
 }
 .header__made:focus {
   color: #ffffff;
@@ -451,6 +459,9 @@ ul {
     left: 257px;
     bottom: 111px;
   }
+}
+.header .header__block-arrow:hover {
+  cursor: url(../images/vector-cursor.svg), auto;
 }
 .header__side1 {
   display: none;
@@ -673,6 +684,7 @@ ul {
 .button-menu:hover {
   background-color: #0a8817;
   border: none;
+  cursor: url(../images/vector-cursor.svg), auto;
 }
 
 .button-menu:focus {
@@ -2373,13 +2385,14 @@ ul {
   width: 100vw;
   height: 100vh;
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear;
 }
+
 .backdrop1.is-hidden1 {
   opacity: 0;
   pointer-events: none;
   transform: translate(-100%, -100%);
 }
+
 .backdrop1.is-hidden1 .modal1 {
   transform: translate(-50%, 0) scale(0.8);
 }
@@ -2389,7 +2402,7 @@ ul {
   overflow: auto;
   width: 280px;
   max-height: 95%;
-  padding: 28px 20px;
+  padding: 5px 20px 28px 20px;
   top: 2.5%;
   left: 50%;
   transform: translate(-50%, 0) scale(1);
@@ -2401,7 +2414,7 @@ ul {
 @media screen and (min-width: 768px) {
   .modal1 {
     width: 568px;
-    padding: 32px 40px;
+    padding: 5px 40px 32px 40px;
   }
 }
 .modal1__title {
@@ -2422,12 +2435,11 @@ ul {
   }
 }
 .modal1__button {
-  position: absolute;
+  position: sticky;
   top: 12px;
-  right: 12px;
   display: block;
   padding: 0;
-  margin: 0;
+  margin-left: 225px;
   border: none;
   background-color: transparent;
   color: rgba(0, 0, 0, 0.1);
@@ -2436,7 +2448,7 @@ ul {
 @media screen and (min-width: 768px) {
   .modal1__button {
     top: 18px;
-    right: 18px;
+    margin-left: 480px;
   }
 }
 .modal1__text {
@@ -2965,7 +2977,7 @@ ul {
   overflow: auto;
   width: 280px;
   max-height: 95%;
-  padding: 28px 20px;
+  padding: 5px 20px 28px 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -2977,7 +2989,7 @@ ul {
 @media screen and (min-width: 768px) {
   .modal4 {
     width: 568px;
-    padding: 32px 60px;
+    padding: 5px 60px 32px 60px;
   }
 }
 .modal4__title {
@@ -2997,12 +3009,11 @@ ul {
   }
 }
 .modal4__button {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+  position: sticky;
+  top: 5px;
   display: block;
   padding: 0;
-  margin: 0;
+  margin-left: 230px;
   border: none;
   background-color: transparent;
   color: rgba(0, 0, 0, 0.1);
@@ -3010,8 +3021,7 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .modal4__button {
-    top: 17px;
-    right: 17px;
+    margin-left: 460px;
   }
 }
 .modal4__text {
