@@ -13,6 +13,7 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden2');
+    document.body.classList.toggle('modal-open');
   }
 
   function onBackdropClick(event) {

@@ -51,6 +51,7 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden1');
+    document.body.classList.toggle('modal-open');
   }
 
   function changeName(event) {

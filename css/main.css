@@ -38,7 +38,13 @@ html {
   box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -56,11 +62,16 @@ h1, h2, h3, h4, h5, h6, p {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.04em;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -2071,11 +2082,15 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
+  visibility: visible;
+  pointer-events: initial;
   background-color: rgba(192, 40, 40, 0.2);
-  transition: opacity 250ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transform: translate(-100%, -100%);
 }
@@ -2384,6 +2399,7 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(192, 40, 40, 0.2);
 }
 
@@ -2449,6 +2465,7 @@ ul {
   .modal1__button {
     top: 18px;
     margin-left: 480px;
+    color: #ff0000;
   }
 }
 .modal1__text {
@@ -2761,6 +2778,7 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(192, 40, 40, 0.2);
   transition: opacity 250ms linear;
 }
@@ -2853,6 +2871,7 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(192, 40, 40, 0.2);
   transition: opacity 250ms linear;
 }
@@ -2960,6 +2979,7 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(192, 40, 40, 0.2);
   transition: opacity 250ms linear;
 }
